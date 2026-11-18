@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finsco - Pricing</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-white text-[#0F172A]">
+
+  <!-- Top Navbar -->
+  <header class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
+    <nav class="flex items-center justify-between py-2">
+      
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-2.5 bg-[#153B34] text-white px-5 py-2.5 rounded-b-2xl rounded-tr-2xl font-bold text-xl tracking-tight">
+        <div class="mt-4 p-2 w-36 h-12 bg-[#203D37] text-white rounded-t-xl shadow-sm">
+          <img src="images/01.png" alt="" class="object-center object-cover w-full h-full" />
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <ul class="hidden md:flex items-center gap-7 text-sm font-medium text-gray-700">
+        <li><a href="#" class="hover:text-[#153B34] transition">Home</a></li>
+        <li><a href="#" class="hover:text-[#153B34] transition">About</a></li>
+        <li><a href="#" class="hover:text-[#153B34] transition">Services</a></li>
+        <li>
+          <a href="#" class="bg-[#D9F17F] text-[#153B34] font-semibold px-4 py-1.5 rounded-full">
+            Pricing
+          </a>
+        </li>
+        <li><a href="#" class="hover:text-[#153B34] transition">Blog</a></li>
+        <li><a href="#" class="hover:text-[#153B34] transition">Contact us</a></li>
+      </ul>
+
+      <!-- Social Icons -->
+      <div class="flex items-center gap-2.5">
+        <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full bg-[#D9F17F] text-[#153B34] flex items-center justify-center text-xs hover:opacity-90 transition">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="#" aria-label="Twitter" class="w-9 h-9 rounded-full bg-gray-200/80 text-gray-700 flex items-center justify-center text-xs hover:bg-gray-300 transition">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full bg-gray-200/80 text-gray-700 flex items-center justify-center text-xs hover:bg-gray-300 transition">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- Pricing Section -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
+    
+    <!-- Top Hero Title -->
+    <div class="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+      <span class="text-xs sm:text-sm font-medium text-gray-600 block mb-3">
+        Pricing
+      </span>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-900 leading-tight tracking-tight">
+        Expert Financial Services Tailored <br class="hidden sm:block" /> to Your Business Needs
+      </h1>
+    </div>
+
+    <!-- Plan Header & Billing Cycle Toggle -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+      <div>
+        <span class="text-xs sm:text-sm font-medium text-gray-500 block mb-2">
+          Pricing & Plan
+        </span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#153B34] leading-snug">
+          We Deliver Perfect Pricing and <br class="hidden sm:block" /> Plan Just For You
+        </h2>
+      </div>
+
+      <!-- Billing Toggle Pills -->
+      <div class="flex items-center gap-2.5" id="billing-tabs">
+        <button 
+          onclick="setBilling('weekly', this)" 
+          class="billing-btn bg-[#D9F17F] text-[#153B34] font-semibold text-xs sm:text-sm px-6 py-2.5 rounded-full transition cursor-pointer"
+        >
+          Weekly
+        </button>
+        <button 
+          onclick="setBilling('monthly', this)" 
+          class="billing-btn bg-[#F8FAFC] border border-gray-200 text-gray-600 hover:text-[#153B34] font-medium text-xs sm:text-sm px-6 py-2.5 rounded-full transition cursor-pointer"
+        >
+          Monthly
+        </button>
+        <button 
+          onclick="setBilling('yearly', this)" 
+          class="billing-btn bg-[#F8FAFC] border border-gray-200 text-gray-600 hover:text-[#153B34] font-medium text-xs sm:text-sm px-6 py-2.5 rounded-full transition cursor-pointer"
+        >
+          Yearly
+        </button>
+      </div>
+    </div>
+
+    <!-- 3-Column Pricing Cards Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8 items-start pb-8">
+
+      <!-- Card 1: Basic Plan -->
+      <div class="relative bg-[#F8FAFC] border border-gray-200/90 rounded-2xl pt-8 px-6 pb-8 text-center">
+        <h3 class="text-base sm:text-lg font-medium text-[#153B34] mb-3">Basic Plan</h3>
+        
+        <div class="flex items-baseline justify-center gap-1 text-[#153B34] mb-3">
+          <span class="text-xl font-semibold">$</span>
+          <span class="price-val text-4xl sm:text-5xl font-semibold tracking-tight" data-weekly="19.50" data-monthly="69.00" data-yearly="690.00">19.50</span>
+          <span class="period-val text-xs sm:text-sm text-gray-500 font-medium">/Week</span>
+        </div>
+
+        <p class="text-xs text-gray-400 mb-6">
+          Lorem ipsum dolor sit amet.
+        </p>
+
+        <hr class="border-gray-200/80 mb-7" />
+
+        <!-- Overlapping Feature Inner Box -->
+        <div class="relative bg-white border border-gray-200/90 rounded-2xl pt-9 pb-6 px-5 -mb-14 shadow-[0_8px_25px_rgba(0,0,0,0.03)] text-left">
+          <!-- Floating CTA Button -->
+          <a 
+            href="#" 
+            class="absolute -top-5 left-1/2 -translate-x-1/2 w-4/5 max-w-[200px] text-center bg-[#D9F17F] hover:bg-[#cde868] text-[#153B34] font-semibold text-xs sm:text-sm py-2.5 rounded-full shadow-sm transition"
+          >
+            Choose Plan
+          </a>
+
+          <ul class="space-y-3.5 text-xs text-gray-500">
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-check text-[#153B34] text-[11px]"></i>
+              <span>Financial Analysis and Reporting</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-check text-[#153B34] text-[11px]"></i>
+              <span>Budgeting and Forecasting</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-check text-[#153B34] text-[11px]"></i>
+              <span>Financial Education Programs</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-check text-[#153B34] text-[11px]"></i>
+              <span>Business Strategy Development</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-check text-[#153B34] text-[11px]"></i>
+              <span>Market Entry and Expansion</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-check text-[#153B34] text-[11px]"></i>
+              <span>Mergers and Acquisitions</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Card 2: Business Plan (Featured Dark Green) -->
+      <div class="relative bg-[#153B34] rounded-2xl pt-8 px-6 pb-8 text-center text-white shadow-lg">
+        <h3 class="text-base sm:text-lg font-medium text-white mb-3">Business Plan</h3>
+        
+        <div class="flex items-baseline justify-center gap-1 mb-3">
+          <span class="text-xl font-semibold text-white">$</span>
+          <span class="price-val text-4xl sm:text-5xl font-semibold tracking-tight text-white" data-weekly="29.50" data-monthly="99.00" data-yearly="990.00">29.50</span>
+          <span class="period-val text-xs sm:text-sm text-[#D9F17F] font-medium">/Week</span>
+        </div>
+
+        <p class="text-xs text-gray-300/80 mb-6">
+          Lorem ipsum dolor sit amet.
+        </p>
+
+        <hr class="border-white/15 mb-7" />
+
+        <!-- Overlapping Feature Inner Box -->
+        <div class="relative bg-[#274A43] border border-white/10 rounded-2xl pt-9 pb-6 px-5 -mb-14 shadow-md text-left">
+          <!-- Floating CTA Button -->
+          <a 
+            href="#" 
+            class="absolute -top-5 left-1/2 -translate-x-1/2 w-4/5 max-w-[200px] text-center bg-[#D9F17F] hover:bg-[#cde868] text-[#153B34] font-semibold text-xs sm:text-sm py-2.5 rounded-full shadow-sm transition"
+          >
+            Choose Plan
+          </a>
+
+          <ul class="space-y-3.5 text-xs text-gray-200">
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-check text-[#D9F17F] text-[11px]"></i>
+              <span>Financial Analysis and Reporting</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-check text-[#D9F17F] text-[11px]"></i>
+              <span>Budgeting and Forecasting</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-check text-[#D9F17F] text-[11px]"></i>
+              <span>Financial Education Programs</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-check text-[#D9F17F] text-[11px]"></i>
+              <span>Business Strategy Development</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-check text-[#D9F17F] text-[11px]"></i>
+              <span>Market Entry and Expansion</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-check text-[#D9F17F] text-[11px]"></i>
+              <span>Mergers and Acquisitions</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Card 3: Enterprise Plan -->
+      <div class="relative bg-[#F8FAFC] border border-gray-200/90 rounded-2xl pt-8 px-6 pb-8 text-center">
+        <h3 class="text-base sm:text-lg font-medium text-[#153B34] mb-3">Enterprise Plan</h3>
+        
+        <div class="flex items-baseline justify-center gap-1 text-[#153B34] mb-3">
+          <span class="text-xl font-semibold">$</span>
+          <span class="price-val text-4xl sm:text-5xl font-semibold tracking-tight" data-weekly="39.50" data-monthly="149.00" data-yearly="1490.00">39.50</span>
+          <span class="period-val text-xs sm:text-sm text-gray-500 font-medium">/Week</span>
+        </div>
+
+        <p class="text-xs text-gray-400 mb-6">
+          Lorem ipsum dolor sit amet.
+        </p>
+
+        <hr class="border-gray-200/80 mb-7" />
+
+        <!-- Overlapping Feature Inner Box -->
+        <div class="relative bg-white border border-gray-200/90 rounded-2xl pt-9 pb-6 px-5 -mb-14 shadow-[0_8px_25px_rgba(0,0,0,0.03)] text-left">
+          <!-- Floating CTA Button -->
+          <a 
+            href="#" 
+            class="absolute -top-5 left-1/2 -translate-x-1/2 w-4/5 max-w-[200px] text-center bg-[#D9F17F] hover:bg-[#cde868] text-[#153B34] font-semibold text-xs sm:text-sm py-2.5 rounded-full shadow-sm transition"
+          >
+            Choose Plan
+          </a>
+
+          <ul class="space-y-3.5 text-xs text-gray-500">
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-check text-[#153B34] text-[11px]"></i>
+              <span>Financial Analysis and Reporting</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-check text-[#153B34] text-[11px]"></i>
+              <span>Budgeting and Forecasting</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-check text-[#153B34] text-[11px]"></i>
+              <span>Financial Education Programs</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-check text-[#153B34] text-[11px]"></i>
+              <span>Business Strategy Development</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-check text-[#153B34] text-[11px]"></i>
+              <span>Market Entry and Expansion</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <i class="fa-solid fa-check text-[#153B34] text-[11px]"></i>
+              <span>Mergers and Acquisitions</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <script>
+    function setBilling(cycle, activeBtn) {
+      // Update tab styles
+      document.querySelectorAll('.billing-btn').forEach(btn => {
+        btn.classList.remove('bg-[#D9F17F]', 'text-[#153B34]', 'font-semibold');
+        btn.classList.add('bg-[#F8FAFC]', 'border', 'border-gray-200', 'text-gray-600', 'font-medium');
+      });
+      activeBtn.classList.remove('bg-[#F8FAFC]', 'border', 'border-gray-200', 'text-gray-600', 'font-medium');
+      activeBtn.classList.add('bg-[#D9F17F]', 'text-[#153B34]', 'font-semibold');
+
+      // Update prices and periods
+      const periodLabel = cycle === 'weekly' ? '/Week' : cycle === 'monthly' ? '/Month' : '/Year';
+      document.querySelectorAll('.price-val').forEach(el => {
+        el.textContent = el.getAttribute(`data-${cycle}`);
+      });
+      document.querySelectorAll('.period-val').forEach(el => {
+        el.textContent = periodLabel;
+      });
+    }
+  </script>
+<!-- Contact / Let's Connect Section -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20 bg-white">
+  <div class="relative">
+    
+    <!-- Top Full-Width Rounded Background Image -->
+    <div class="w-full h-72 sm:h-96 md:h-[460px] rounded-3xl overflow-hidden shadow-sm">
+      <img 
+        src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1400&q=80" 
+        alt="Workspace flatlay with laptop, calculator, and financial notes" 
+        class="w-full h-full object-cover"
+      />
+    </div>
+
+    <!-- Overlapping Dark Green Contact Form Card -->
+    <div class="relative lg:w-[54%] lg:ml-auto lg:mr-10 -mt-36 sm:-mt-56 md:-mt-72 bg-[#1D3E38] rounded-3xl p-7 sm:p-10 md:p-12 shadow-2xl text-white">
+      
+      <span class="text-xs sm:text-sm font-medium text-[#D9F17F] block mb-2">
+        Let's Connect
+      </span>
+      
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold text-white leading-tight mb-2.5">
+        Ready To Help Your Business
+      </h2>
+      
+      <p class="text-xs sm:text-sm text-gray-300/90 mb-7">
+        Need help with a project, have a question about our work? We're here.
+      </p>
+
+      <form class="space-y-4">
+        <div>
+          <input 
+            type="text" 
+            placeholder="Full Name" 
+            required
+            class="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-xs sm:text-sm text-white placeholder-gray-300/80 focus:outline-none focus:border-[#D9F17F] transition"
+          />
+        </div>
+
+        <div>
+          <input 
+            type="email" 
+            placeholder="Your Email" 
+            required
+            class="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-xs sm:text-sm text-white placeholder-gray-300/80 focus:outline-none focus:border-[#D9F17F] transition"
+          />
+        </div>
+
+        <div>
+          <textarea 
+            rows="4" 
+            placeholder="Write Your Message" 
+            required
+            class="w-full bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-xs sm:text-sm text-white placeholder-gray-300/80 focus:outline-none focus:border-[#D9F17F] transition resize-none"
+          ></textarea>
+        </div>
+
+        <!-- Bottom Action Row: Privacy Checkbox & Submit Button -->
+        <div class="pt-3 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <label class="flex items-center gap-2.5 cursor-pointer select-none">
+            <input 
+              type="checkbox" 
+              required
+              class="appearance-none w-3.5 h-3.5 rounded-full border border-[#D9F17F] checked:bg-[#D9F17F] transition cursor-pointer shrink-0"
+            />
+            <span class="text-xs text-gray-200">
+              I agree to the privacy policy
+            </span>
+          </label>
+
+          <button 
+            type="submit" 
+            class="bg-[#D9F17F] hover:bg-[#cde868] text-[#153B34] font-semibold text-xs sm:text-sm px-9 py-3 rounded-full transition cursor-pointer self-start sm:self-auto"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+<footer class="bg-[#F8FAFC] pt-12 pb-8 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto">
+    
+    <!-- Top CTA Newsletter Banner -->
+    <div class="bg-[#1B3B36] rounded-3xl px-6 py-10 sm:px-12 sm:py-14 mb-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Left Content -->
+        <div class="lg:col-span-7">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold text-white leading-snug mb-5">
+            Ready to Simplify Your <br class="hidden sm:block" /> Bookkeeping?
+          </h2>
+          
+          <div class="flex flex-wrap items-center gap-x-8 gap-y-3 text-xs sm:text-sm text-gray-300">
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-check text-[#D9F17F]"></i>
+              <span>Book Free Consultation</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-check text-[#D9F17F]"></i>
+              <span>Get a Custom Quote</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Form -->
+        <div class="lg:col-span-5">
+          <form class="flex flex-col items-start gap-3.5 w-full">
+            <input 
+              type="email" 
+              placeholder="Enter Your Email" 
+              required
+              class="w-full bg-white/10 border border-white/15 text-white placeholder-gray-300 text-sm rounded-xl px-4 py-3.5 focus:outline-none focus:border-[#D9F17F] transition"
+            />
+            <button 
+              type="submit" 
+              class="bg-[#D9F17F] hover:bg-[#cde868] text-[#1B3B36] font-semibold text-sm px-7 py-2.5 rounded-full transition cursor-pointer"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Main Footer Columns -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 pb-14 border-b border-gray-200/80">
+      
+      <!-- Column 1: About Company -->
+      <div class="lg:col-span-4 pr-0 lg:pr-8">
+        <h3 class="text-base font-semibold text-[#1B3B36] mb-4">About Company</h3>
+        <p class="text-gray-500 text-xs sm:text-sm leading-relaxed mb-6">
+          Let us handle your finances while you focus on growing your business.
+        </p>
+        
+        <!-- Social Icons -->
+        <div class="flex items-center gap-2.5">
+          <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full bg-[#D9F17F] text-[#1B3B36] flex items-center justify-center text-xs hover:opacity-90 transition">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#" aria-label="Twitter" class="w-9 h-9 rounded-full bg-gray-200/80 text-gray-700 flex items-center justify-center text-xs hover:bg-gray-300 transition">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full bg-gray-200/80 text-gray-700 flex items-center justify-center text-xs hover:bg-gray-300 transition">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#" aria-label="LinkedIn" class="w-9 h-9 rounded-full bg-gray-200/80 text-gray-700 flex items-center justify-center text-xs hover:bg-gray-300 transition">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Column 2: Useful Link -->
+      <div class="lg:col-span-3">
+        <h3 class="text-base font-semibold text-[#1B3B36] mb-4">Useful Link</h3>
+        <ul class="space-y-2.5 text-xs sm:text-sm text-gray-500">
+          <li><a href="#" class="hover:text-[#1B3B36] transition">Home</a></li>
+          <li><a href="#" class="hover:text-[#1B3B36] transition">About us</a></li>
+          <li><a href="#" class="hover:text-[#1B3B36] transition">Pricing</a></li>
+          <li><a href="#" class="hover:text-[#1B3B36] transition">Why Choose us</a></li>
+          <li><a href="#" class="hover:text-[#1B3B36] transition">Who we are</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Support Center -->
+      <div class="lg:col-span-2">
+        <h3 class="text-base font-semibold text-[#1B3B36] mb-4">Support Center</h3>
+        <ul class="space-y-2.5 text-xs sm:text-sm text-gray-500">
+          <li><a href="#" class="hover:text-[#1B3B36] transition">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-[#1B3B36] transition">Terms & Conditions</a></li>
+          <li><a href="#" class="hover:text-[#1B3B36] transition">Disclaimer</a></li>
+          <li><a href="#" class="hover:text-[#1B3B36] transition">Help & FAQ's</a></li>
+          <li><a href="#" class="hover:text-[#1B3B36] transition">Testimonials</a></li>
+          <li><a href="#" class="hover:text-[#1B3B36] transition">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Contact Us -->
+      <div class="lg:col-span-3">
+        <h3 class="text-base font-semibold text-[#1B3B36] mb-4">Contact Us</h3>
+        <div class="space-y-4 text-xs sm:text-sm">
+          <div>
+            <span class="block text-[11px] text-gray-400 mb-0.5">Get Closer</span>
+            <p class="font-medium text-[#1B3B36] leading-snug">
+              Jl. Raya Kuta Chartered <br /> No.70 Street, Bali
+            </p>
+          </div>
+          <div>
+            <span class="block text-[11px] text-gray-400 mb-0.5">Work With Us</span>
+            <a href="mailto:collab@finsco.com" class="font-medium text-[#1B3B36] hover:underline">
+              collab@finsco.com
+            </a>
+          </div>
+          <div>
+            <span class="block text-[11px] text-gray-400 mb-0.5">For Consulting</span>
+            <a href="tel:+6288962220" class="font-medium text-[#1B3B36] hover:underline">
+              (+62) 8896-2220
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      
+      <!-- Logo & Tagline -->
+      <div class="flex flex-col sm:flex-row items-center gap-4">
+        <a href="#" class="flex items-center gap-2.5 bg-[#1B3B36] text-white px-5 py-2.5 rounded-t-xl sm:rounded-xl font-bold text-xl tracking-tight">
+          <span class="w-7 h-7 rounded-full border-2 border-[#D9F17F] flex items-center justify-center text-[#D9F17F] text-xs">
+            <i class="fa-solid fa-chart-simple"></i>
+          </span>
+          Finsco
+        </a>
+        <p class="text-xs text-gray-500 text-center sm:text-left">
+          <strong class="text-[#1B3B36] font-semibold">Finsco</strong> · Financial & Business Consulting Template Kit.
+        </p>
+      </div>
+
+      <!-- Copyright -->
+      <p class="text-xs text-gray-500 text-center sm:text-right">
+        Copyright © 2024 Baliniz. All Rights Reserved.
+      </p>
+
+    </div>
+
+  </div>
+</footer>
+
+
+
+</body>
+</html>
